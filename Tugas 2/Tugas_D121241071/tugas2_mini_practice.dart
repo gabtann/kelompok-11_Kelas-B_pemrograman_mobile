@@ -56,16 +56,6 @@ double tentukanDiskon(int totalBelanjaan) {
   }
 }
 
-// Entry point program
-void main() {
-  tampilkanDaftarBelanjaan();
-
-  int totalBelanjaan = hitungTotalBelanjaan();
-  double diskon = tentukanDiskon(totalBelanjaan);
-
-  tampilkanTotal(totalBelanjaan, diskon);
-}
-
 // Menampilkan hasil akhir
 void tampilkanTotal(int totalBelanjaan, double diskon) {
   double potonganHarga = totalBelanjaan * diskon;
@@ -76,4 +66,14 @@ void tampilkanTotal(int totalBelanjaan, double diskon) {
   print('Diskon          : ${diskon * 100}%');
   print('Potongan harga  : Rp$potonganHarga');
   print('Total akhir     : Rp$totalAkhir');
+}
+
+// Entry point program
+void main() {
+  tampilkanDaftarBelanjaan();
+
+  int totalBelanjaan = hitungTotalBelanjaan();
+  double diskon = tentukanDiskon(totalBelanjaan);
+
+  tampilkanTotal(totalBelanjaan, diskon);
 }
